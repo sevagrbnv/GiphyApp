@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".presentation.mainFragment.MainFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edTextDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tranparent"
+                android:gravity="top"
+                android:hint="Enter the title"
+                android:scrollbars="vertical" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:text="search"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay"
+            tools:listitem="@layout/list_item"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBarr"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
+
+</layout>
